@@ -1,0 +1,9 @@
+# Get a random code from an API.
+
+import requests
+
+random_quote = requests.get("http://api.quotable.io/random").json()
+content = random_quote["content"]
+author = random_quote["author"]
+quote_daily = (content + " By " + author)
+print(quote_daily)
